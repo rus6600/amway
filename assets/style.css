@@ -536,15 +536,19 @@ textarea:not([rows]) {
   }
   .longevity__wrapper {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0;
   }
   .longevity__text {
-    padding-block: 2rem;
+    padding: 1rem;
   }
   .points {
     grid-template-columns: 1fr;
     row-gap: 1rem;
   }
+  .point {
+    padding: 1rem;
+  }
+
   .photo-card {
     display: flex;
     flex-direction: column;
