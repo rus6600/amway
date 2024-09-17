@@ -11,7 +11,8 @@
 }
 
 :root {
-  --container-width: 1206px;
+  --container-width: 1336px;
+  --container-width-sm: 320px;
   --bg-light-green: #f3f8ec;
   --deep-green: #00613c;
   --dark-green: #006f44;
@@ -27,10 +28,6 @@
 *::after {
   box-sizing: border-box;
   font-family: "GTWalsheim", sans-serif;
-}
-
-p {
-  line-height: 24px;
 }
 
 /* Prevent font size inflation */
@@ -146,10 +143,6 @@ textarea:not([rows]) {
   justify-content: space-between;
 }
 
-.double-energy__text p {
-  /* max-width: 444px; */
-}
-
 .double-energy__text_images {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -186,8 +179,6 @@ textarea:not([rows]) {
 .longevity__wrapper {
   display: flex;
   gap: 50px;
-  /* column-gap: 3rem; */
-  /* padding-block: 115px 47px; */
 }
 
 .longevity__text {
@@ -290,8 +281,6 @@ textarea:not([rows]) {
 
 .breakfast {
   background-color: var(--bg-light-green);
-  /* border-block: 69px solid transparent;
-  writing-mode: horizontal-tb; */
 }
 
 .breakfast-wrapper {
@@ -515,4 +504,116 @@ textarea:not([rows]) {
 
 .bg-ligth-green {
   background-color: var(--bg-light-green);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+  .logo__img {
+    padding: 1rem;
+  }
+
+  .double-energy__wrapper {
+    flex-direction: column-reverse;
+  }
+  .double-energy__text_images {
+    max-width: 90%;
+  }
+  .double-energy__text {
+    padding: 2rem 1rem;
+    flex-direction: column-reverse;
+  }
+  .double-energy__logo {
+    margin-top: 1rem;
+  }
+  .longevity {
+    padding-block: 2rem 0;
+  }
+  .longevity__wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .longevity__text {
+    padding-block: 2rem;
+  }
+  .points {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+  .photo-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  .arrow {
+    margin: 120px auto;
+  }
+  .tips {
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .breakfast-wrapper {
+    position: relative;
+    display: flex;
+    margin-block: 8rem;
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+  .breakfast__titles {
+    grid-row: 1/1;
+    max-width: 100%;
+  }
+  .breakfast__img_sm {
+    position: absolute;
+    top: -10%;
+    width: 60%;
+  }
+  .breakfast__desc {
+    grid-row: 1/1;
+    align-self: center;
+  }
+  .breakfast__img_lg {
+    grid-row: 1/1;
+  }
+  .nutrients {
+    padding-inline: 1rem;
+  }
+  .nutrients__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrients__card {
+    margin-block: 1rem;
+  }
+  .products__wrapper {
+    grid-template-columns: 1fr;
+  }
+  .products__item {
+    display: grid;
+    grid-template-rows: 2fr min-content 1fr min-content;
+    padding: 2rem 1rem;
+  }
+  .photo-card__text {
+    padding: 1rem;
+  }
+  .advices__titles {
+    padding-inline: 1rem;
+  }
+  .advice {
+    flex-direction: column;
+  }
+  .advice__text {
+    padding: 1rem;
+  }
+  .energy__icons {
+    flex-direction: column;
+  }
 }
