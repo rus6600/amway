@@ -530,6 +530,7 @@ textarea:not([rows]) {
   }
   .double-energy__logo {
     margin-top: 1rem;
+    width: 60%;
   }
   .longevity {
     padding-block: 2rem 0;
