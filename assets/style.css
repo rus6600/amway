@@ -603,9 +603,13 @@ a {
     row-gap: 1rem;
   }
   .point {
+    gap: 0;
     padding: 1rem;
   }
 
+  .point__title {
+    margin-block: 1rem;
+  }
   .photo-card {
     display: flex;
     flex-direction: column;
